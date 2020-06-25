@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>BLUSH</title>
+    <link rel='stylesheet' type='text/css' href='style/style.css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:400,400i,600,600i,700,700i,800,800i|Roboto+Mono:400,400i,500,500i,700,700i&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Asap:600&display=swap' rel='stylesheet'>
+    <link rel='icon' href='images/favicon.ico' type='image/x-icon' />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href='index.html'><img id='logo' src='images/logo-blush.svg' alt='Logo blush'></a></li>
+            </ul>
+        </nav>
+
+        <div id='introduction' data-introduction>
+            <h1>Match. Chat. Date!</h1>
+            <p>Ben jij klaar om te gaan daten en misschien wel jouw levenspartner te ontmoeten? Maak een profiel aan en start jouw avontuur!</p>
+            <br>
+            <a href='#scrollToForm'> Maak een profiel aan</a>
+        </div>
+
+        <form class='firstForm' action='gegevens.html' data-profileForm>
+
+<!--
+            <div class="container">
+
+                <div id="stepProgressBar">
+                    <div class="step">
+                        <p class="step-text"></p>
+                        <div class="bullet">1</div>
+                    </div>
+                    <div class="step">
+                        <p class="step-text"></p>
+                        <div class="bullet">2</div>
+                    </div>
+                    <div class="step">
+                        <p class="step-text"></p>
+                        <div class="bullet">3</div>
+                    </div>
+                    <div class="step">
+                        <p class="step-text"></p>
+                        <div class="bullet ">4</div>
+                    </div>
+                </div>
+            </div>
+-->
+
+
+            <a href='index.html'><img id='backicon' src='images/kruis.png' alt='Close form icon'></a>
+
+            <fieldset data-formPartOne>
+                <div id='progressbar'>
+                    <div></div>
+                </div>
+                <legend id='scrollToForm'>Meld je aan</legend>
+                <label from='username'>Gebruikersnaam</label>
+                <input id='username' type='text' required>
+                <br>
+                <label from='email'>E-mail</label>
+                <input id='email' type='email' required>
+                <br>
+                <label from='password'>Wachtwoord</label>
+                <input id='password' type='password' pattern='.{8,}' required title='8 characters minimum' required>
+                <h5>Gebruik minimaal 8 tekens</h5>
+                <br>
+                <p id='login'>Ben je al geregisteerd? <a href='#'>Log in</a></p>
+                <input type='submit' value='Maak een profiel aan' href='gegevens.html'>
+            </fieldset>
+            <input type='submit' value='Volgende' data-firstButton>
+
+
+            <fieldset data-formPartTwo>
+                <div id='progressbar'>
+                    <div id='progress2'></div>
+                </div>
+                <legend>Maak een profiel</legend>
+                <label from='birthday'>Geboortedatum</label>
+                <input id='birthday' type='date' required>
+                <br>
+                <label from='regio'>Provincie</label>
+                <select id='regio'>
+                    <option value='geenRegio' selected>Kies een provincie </option>
+                    <option value='Drenthe'>Drenthe</option>
+                    <option value='Flevoland'>Flevoland</option>
+                    <option value='Friesland'>Friesland</option>
+                    <option value='Gelderland'>Gelderland</option>
+                    <option value='Groningen'>Groningen</option>
+                    <option value='Limburg'>Limburg</option>
+                    <option value='Noord-Brabant'>Noord-Brabant</option>
+                    <option value='Noord-Holland'>Noord-Holland</option>
+                    <option value='Overijssel'>Overijssel</option>
+                    <option value='Utrecht'>Utrecht</option>
+                    <option value='Zeeland'>Zeeland</option>
+                    <option value='Zuid-Holland'>Zuid-Holland</option>
+                </select>
+                <br>
+                <label for='gender'>Geslacht</label>
+                <div class='gender'>
+                    <input type='radio' id='male' name='gender' value='male'>
+                    <label for='male'>Male</label>
+                    <br>
+                    <input type='radio' id='female' name='gender' value='female'>
+                    <label for='female'>Female</label>
+                    <br>
+                    <input type='radio' id='other' name='gender' value='other'>
+                    <label for='other'>Other</label>
+                </div>
+                <br>
+            </fieldset>
+            <input type='submit' value='Volgende 2' data-secondButton>
+
+            <fieldset data-formPartThree>
+                <div id='progressbar'>
+                    <div id='progress3'></div>
+                </div>
+                <legend>Meld je aan</legend>
+                <label from='datum'>Profielfoto</label>
+                <input class='file-upload' type='file' accept='image/*' />
+                <br>
+                <label for='biografie'>Over mij</label>
+                <textarea name='biografie'></textarea>
+            </fieldset>
+            <input type='submit' value='Volgende 3' data-thirdButton>
+
+
+            <fieldset data-formPartFour>
+                <div id='progressbar'>
+                    <div id='progress4'></div>
+                </div>
+                <legend>Profieloverzicht</legend>
+                <img class='profielfoto' src='images/profielfotokopie.jpg' alt='Profiel foto'>
+                <h2>Elise Schoenmans, 27</h2>
+                <h6><img class='locationPin' src='images/pin-fill-green.svg' alt='Location Icon'>Noord-Holland</h6>
+                <p id='login2'>Mijn naam is Elise en ik ben docent op de basisschool. Ik houd van natuur en wandelen en eet graag Italiaans.</p>
+            </fieldset>
+
+            <input data-fourthButton type='submit' value='Meld mij aan en start met daten!'>
+
+            <fieldset data-formPartFive>
+                <legend>Done!</legend>
+                <img class='verified' src='images/verified.svg' alt='Profiel foto'>
+            </fieldset>
+
+            <input data-formSubmit type='submit' value='Check!'>
+
+        </form>
+
+    </header>
+
+    <script src='js/frontend.js'></script>
+</body>
+
+</html>
+
+
+<!--SOURCE: Progress Bar with HTML and CSS. (2011, 25 augustus). Geraadpleegd op 24 maart 2020, van https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css/7191095-->
