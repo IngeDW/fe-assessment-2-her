@@ -75,6 +75,5 @@ fourthButton.addEventListener('click', function() {
 })
 
 formSubmit.addEventListener('click', function() {
-  event.preventDefault();
   formPartFour.classList.add('away');
 })
